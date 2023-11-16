@@ -51,7 +51,6 @@
             }
         };
         
-          
         //Handle Yup for fomik validation
         const validationSchema = Yup.object({
             amount: Yup.number().positive('Amount must be a positive number').required('Amount is required'),
