@@ -30,20 +30,22 @@
             formik.setFieldValue('type', event.target.value);
         };
         const onSubmit = (values) => {
+            let updatedData;
             if (editingIndex !== null) {
-            const updatedData = [...storedData];
-            updatedData[editingIndex] = values;
-            setStoredData(updatedData);
-            setEditingIndex(null);
-            document.getElementById('addButton').innerText = "Add";
-            toast.success('Record updated successfully!');
+              updatedData = [...storedData];
+              updatedData[editingIndex] = values;
+              setEditingIndex(null);
+              document.getElementById('addButton').innerText = "Add";
+              toast.success('Record updated successfully!');
             } else {
-            setStoredData([...storedData, values]);
-            toast.success('Record added successfully!');
+              updatedData = [...storedData, values];
+              toast.success('Record added successfully!');
             }
-            localStorage.setItem("allRecords", JSON.stringify([...storedData , values]));
+            setStoredData(updatedData);
+            localStorage.setItem("allRecords", JSON.stringify(updatedData));
             formik.resetForm();
-        };
+          };
+          
         //Handle Yup for fomik validation
         const validationSchema = Yup.object({
             amount: Yup.number().positive('Amount must be a positive number').required('Amount is required'),
