@@ -30,19 +30,22 @@
         const handleTypeChange = (event) => {
             formik.setFieldValue('type', event.target.value);
         };
-        const onSubmit = async (values) => {
+        const onSubmit = (values) => {
             try {
               let updatedData;
-          
-              if (editingIndex !== null) {
-                updatedData = [...storedData];
-                updatedData[editingIndex] = values;
-                setEditingIndex(null);
-                document.getElementById('addButton').innerText = "Add";
-                toast.success('Record updated successfully!');
+              if (!Array.isArray(storedData)) {
+                updatedData = [values];
               } else {
-                updatedData = [...storedData, values];
-                toast.success('Record added successfully!');
+                if (editingIndex !== null) {
+                  updatedData = [...storedData];
+                  updatedData[editingIndex] = values;
+                  setEditingIndex(null);
+                  document.getElementById('addButton').innerText = "Add";
+                  toast.success('Record updated successfully!');
+                } else {
+                  updatedData = [...storedData, values];
+                  toast.success('Record added successfully!');
+                }
               }
           
               setStoredData(updatedData);
