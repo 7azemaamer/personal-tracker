@@ -32,6 +32,9 @@
         };
         const onSubmit = (values) => {
             try {
+                console.log("storedData:", storedData);
+                console.log("values:", values);
+        
                 let updatedData;
                 if (editingIndex !== null) {
                     updatedData = [...storedData];
@@ -43,6 +46,9 @@
                     updatedData = [...storedData, values];
                     toast.success('Record added successfully!');
                 }
+        
+                console.log("updatedData:", updatedData);
+        
                 setStoredData(updatedData);
                 localStorage.setItem("allRecords", JSON.stringify(updatedData));
                 formik.resetForm();
