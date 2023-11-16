@@ -69,3 +69,6 @@ body{
 .clickable{
   cursor: pointer !important;
 }
+.fs-0{
+  font-size: 100px !important;
+}
