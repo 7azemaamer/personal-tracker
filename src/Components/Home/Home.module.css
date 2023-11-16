@@ -1,0 +1,10 @@
+.customize-tab{
+    list-style: none;
+    display: flex;
+    border: none !important;
+    justify-content: start;
+
+}
+.customize-tab li {
+    padding: 0px 10px;
+}

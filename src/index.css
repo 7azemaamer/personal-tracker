@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/*Global Rules*/
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --bg-main:#1C4E80;
+  --second-color:#0091D5;
+  --btn-color:#EA6A47;
+  --backup-color:#A5D8DD;
+  --main-gray:#F1F1F1;
+}
+body{
+  background-color: var(--main-gray) !important;
+  color: #202020 !important;
+}
+.text-main{
+  color: var(--bg-main) !important;
+}
+.text-gray{
+  color: var(--main-gray) !important;
+}
+.bg-gray{
+  background-color: var(--main-gray) !important;
+}
+.text-orange{
+  color: var(--btn-color) !important;
+}
+.bg-main{
+  background-color: var(--bg-main) !important;
+}
+.btn-main{
+    --bs-btn-color: #fff !important;
+    --bs-btn-bg: var(--bg-main) !important;
+    --bs-btn-border-color: var(--bg-main);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #335d87 !important;
+    --bs-btn-hover-border-color: #335d87;
+    --bs-btn-focus-shadow-rgb: 60,153,110;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #335d87;
+    --bs-btn-active-border-color: #335d87;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--bg-main);
+    --bs-btn-disabled-border-color: var(--bg-main);
+}
+.btn-orange{
+    --bs-btn-color: #fff !important;
+    --bs-btn-bg: var(--btn-color) !important;
+    --bs-btn-border-color: var(--btn-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #e88063 !important;
+    --bs-btn-hover-border-color: #e88063;
+    --bs-btn-focus-shadow-rgb: 60,153,110;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #e88063;
+    --bs-btn-active-border-color: #e88063;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--btn-color);
+    --bs-btn-disabled-border-color: var(--btn-color);
+}
+/*Edit nav tabs for global*/
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: var(--bs-nav-pills-link-active-color);
+  background-color: var(--bg-main) !important;
+}
+.nav-pills .nav-link{
+  color: var(--bg-main);
+}
+.clickable{
+  cursor: pointer !important;
 }
