@@ -32,24 +32,25 @@
         };
         const onSubmit = (values) => {
             try {
-              let updatedData;
-              if (editingIndex !== null) {
-                updatedData = [...storedData];
-                updatedData[editingIndex] = values;
-                setEditingIndex(null);
-                document.getElementById('addButton').innerText = "Add";
-                toast.success('Record updated successfully!');
-              } else {
-                updatedData = [...storedData, values];
-                toast.success('Record added successfully!');
-              }
-              setStoredData(updatedData);
-              localStorage.setItem("allRecords", JSON.stringify(updatedData));
-              formik.resetForm();
+                let updatedData;
+                if (editingIndex !== null) {
+                    updatedData = [...storedData];
+                    updatedData[editingIndex] = values;
+                    setEditingIndex(null);
+                    document.getElementById('addButton').innerText = "Add";
+                    toast.success('Record updated successfully!');
+                } else {
+                    updatedData = [...storedData, values];
+                    toast.success('Record added successfully!');
+                }
+                setStoredData(updatedData);
+                localStorage.setItem("allRecords", JSON.stringify(updatedData));
+                formik.resetForm();
             } catch (error) {
-              console.error("Error in onSubmit:", error);
+                console.error("Error in onSubmit:", error);
             }
-          };
+        };
+        
           
         //Handle Yup for fomik validation
         const validationSchema = Yup.object({
