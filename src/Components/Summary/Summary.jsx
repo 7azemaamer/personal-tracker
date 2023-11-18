@@ -66,7 +66,7 @@ export default function Summary(){
                     <h4 className="mb-0">Total expenses : {totalExpense}$</h4>
                 </div>
             </div>
-            <div className={`col-md-8 ${window.matchMedia("(max-width: 700px)")? 'w-100':"w-50" } d-flex align-items-center justify-content-end`}>
+            <div className={`col-md-8 col-sm-12 ${window.matchMedia("(max-width: 700px)").matches ? 'w-100' : 'w-50'} d-flex align-items-center justify-content-end`}>
                 <Pie data={data} />
             </div>
         </div>
