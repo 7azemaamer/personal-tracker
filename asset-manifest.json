@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-tracker/static/css/main.3332eeb7.css",
-    "main.js": "/personal-tracker/static/js/main.ee8b2e3f.js",
+    "main.js": "/personal-tracker/static/js/main.b788243b.js",
     "static/js/787.3742f48c.chunk.js": "/personal-tracker/static/js/787.3742f48c.chunk.js",
     "static/media/fa-solid-900.ttf": "/personal-tracker/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/fa-brands-400.ttf": "/personal-tracker/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
@@ -13,11 +13,11 @@
     "static/media/fa-v4compatibility.woff2": "/personal-tracker/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/personal-tracker/index.html",
     "main.3332eeb7.css.map": "/personal-tracker/static/css/main.3332eeb7.css.map",
-    "main.ee8b2e3f.js.map": "/personal-tracker/static/js/main.ee8b2e3f.js.map",
+    "main.b788243b.js.map": "/personal-tracker/static/js/main.b788243b.js.map",
     "787.3742f48c.chunk.js.map": "/personal-tracker/static/js/787.3742f48c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3332eeb7.css",
-    "static/js/main.ee8b2e3f.js"
+    "static/js/main.b788243b.js"
   ]
 }
